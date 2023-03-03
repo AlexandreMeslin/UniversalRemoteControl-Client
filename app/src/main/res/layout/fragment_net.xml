@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragment.NetFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/net_remote_control"
+                android:textColor="@color/white"
+                android:textSize="34sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/net_portal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/portal"
+                    android:textColor="@color/black" />
+                <!-- By setting the layout_weight of the View to 1, it will fill all the remaining space between the two buttons. -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/net_on_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/on_off"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/net_mosaico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/mosaico"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/info"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/net_volume_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/volume_up"
+                        android:text="@string/plus"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:text="@string/volume" />
+
+                    <Button
+                        android:id="@+id/net_volume_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/volume_down"
+                        android:text="@string/minus"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/net_mute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/mute"
+                    android:text="@string/mute"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/net_voltar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/voltar"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/net_channel_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:text="@string/plus"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/channel" />
+
+                    <Button
+                        android:id="@+id/net_channel_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:text="@string/minus"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/net_sair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/white"
+                        android:text="@string/sair"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent" />
+                    <!-- https://developer.android.com/studio/write/vector-asset-studio#running -->
+                    <ImageButton
+                        android:id="@+id/net_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/seta_para_cima"
+                        android:rotation="0"
+                        android:src="@drawable/baseline_arrow_circle_up_24"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/net_net_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:text="@string/net_tv"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/net_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/seta_para_a_esquerda"
+                        android:rotation="0"
+                        android:src="@drawable/outline_arrow_circle_left_24"
+                        android:textColor="@color/black" />
+
+                    <ImageButton
+                        android:id="@+id/net_ok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/ok"
+                        android:rotation="0"
+                        android:src="@drawable/outline_check_circle_24"
+                        android:textColor="@color/black" />
+
+                    <ImageButton
+                        android:id="@+id/net_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/seta_para_a_direita"
+                        android:rotation="0"
+                        android:src="@drawable/outline_arrow_circle_right_24"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/net_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/seta_para_baixo"
+                    android:rotation="180"
+                    android:src="@drawable/baseline_arrow_circle_up_24"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <Button
+                    android:id="@+id/net_itv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/itv"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/net_audio"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/green"
+                    android:text="@string/audio"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/net_agora"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/agora"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/net_legenda"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/yellow"
+                    android:text="@string/legenda"
+                    android:textColor="@color/black" />
+
+                <ImageButton
+                    android:id="@+id/net_message"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/blue"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/baseline_message_24"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/net_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="8dp"
+                    android:text="@string/_1"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="16dp"
+                    android:text="@string/_2"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="32dp"
+                    android:text="@string/_3"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/net_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_4"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_5"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_6"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/net_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_7"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_8"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_9"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/net_fav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/fav"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_0"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/menu"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#809980"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/net_rew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/rewind"
+                    android:src="@drawable/baseline_fast_rewind_24"
+                    android:text="@string/rew" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/net_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/play"
+                    android:src="@drawable/baseline_play_arrow_24"
+                    android:text="@string/play" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/net_fwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/forward"
+                    android:src="@drawable/baseline_fast_forward_24"
+                    android:text="@string/fwd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#809980"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/net_replay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/replay"
+                    android:src="@drawable/baseline_replay_24"
+                    android:text="@string/replay" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/net_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/stop"
+                    android:src="@drawable/baseline_stop_24"
+                    android:text="@string/stop" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/net_rec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/record"
+                    android:src="@drawable/baseline_fiber_manual_record_24"
+                    android:text="@string/record" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/net_ppv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/ppv"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/now"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_musica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/musica"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
