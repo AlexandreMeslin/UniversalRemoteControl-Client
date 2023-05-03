@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragment.TVSonyFragment"
+    tools:ignore="TooManyViews">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/tv_sony_input"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/input"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                tools:ignore="RelativeOverlap">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/power"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/tv_sony_i_o"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green_dark"
+                    android:text="@string/i_o"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:elevation="100dp"
+                android:text="@string/bravia_sync"
+                android:textColor="@color/white"
+                android:textSize="10pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/tv_sony_theater"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/yellow"
+                    android:text="@string/theater"
+                    android:textColor="@color/black" />
+
+                <ImageButton
+                    android:id="@+id/tv_sony_fast_rewind"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/grey_dark"
+                    android:contentDescription="@string/fast_rewind"
+                    android:src="@drawable/baseline_fast_rewind_white_24" />
+
+                <ImageButton
+                    android:id="@+id/tv_sony_play"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/grey_dark"
+                    android:contentDescription="@string/play"
+                    android:src="@drawable/baseline_play_arrow_white_24" />
+
+                <ImageButton
+                    android:id="@+id/tv_sony_fast_forward"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/grey_dark"
+                    android:contentDescription="@string/fast_forward"
+                    android:src="@drawable/baseline_fast_forward_white_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/tv_sony_sync_menu"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/grey_dark"
+                    android:text="@string/sync_menu"
+                    android:textColor="@color/white" />
+
+                <ImageButton
+                    android:id="@+id/tv_sony_previous"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/grey_dark"
+                    android:contentDescription="@string/previous"
+                    android:src="@drawable/baseline_skip_previous_white_24" />
+
+                <ImageButton
+                    android:id="@+id/tv_sony_stop"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/grey_dark"
+                    android:contentDescription="@string/stop"
+                    android:src="@drawable/baseline_stop_white_24" />
+
+                <ImageButton
+                    android:id="@+id/tv_sony_next"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/grey_dark"
+                    android:contentDescription="@string/next"
+                    android:src="@drawable/baseline_skip_next_white_24" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tv_sony_i_manual"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/i_manual"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/tv_sony_scene"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/scene"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/tv_sony_wide"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/wide"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tv_sony_digital_analog"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/digital_analog"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/tv_sony_exit"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/exit_sair"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/tv_sony_internet_video"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/internet_video"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tv_sony_guide"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/guide"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/tv_sony_favorites"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/favorites"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/tv_sony_display"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/display"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!-- This relative layout creates a D-Pad -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/tv_sony_d_pad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/d_pad"
+                android:src="@drawable/d_pad_dark_grey" />
+
+            <Button
+                android:id="@+id/tv_sony_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:text="@string/ok"
+                android:textColor="@color/white" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <Button
+                    android:id="@+id/tv_sony_left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/tv_sony_d_pad"
+                android:layout_centerVertical="true">
+
+                <Button
+                    android:id="@+id/tv_sony_right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <Button
+                    android:id="@+id/tv_sony_up"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_sony_d_pad"
+                android:layout_centerHorizontal="true">
+
+                <Button
+                    android:id="@+id/tv_sony_down"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tv_sony_return"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/txt_return"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/tv_sony_home"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/home_menu"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/tv_sony_options"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/options"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/tv_sony_red"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/red"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/tv_sony_green"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/tv_sony_yellow"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/yellow"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/tv_sony_blue"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <Button
+                android:id="@+id/tv_sony_1"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:elevation="8dp"
+                android:text="@string/_1"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/tv_sony_2"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:elevation="16dp"
+                android:text="@string/_2"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/tv_sony_3"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:elevation="32dp"
+                android:text="@string/_3"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <Button
+                android:id="@+id/tv_sony_4"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_4"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/tv_sony_5"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_5"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/tv_sony_6"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_6"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <Button
+                android:id="@+id/tv_sony_7"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_7"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/tv_sony_8"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_8"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/tv_sony_9"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_9"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <Button
+                android:id="@+id/tv_sony_ponto"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/ponto"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/tv_sony_0"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_0"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/tv_sony_ent"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/ent"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <Button
+                android:id="@+id/tv_sony_muting"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/mute"
+                android:text="@string/muting"
+                android:textColor="@color/white" />
+
+            <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:columnCount="1"
+                android:rowCount="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text="@string/volume"
+                    android:textColor="@color/white" />
+
+                <View
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_row="1"
+                    android:layout_rowSpan="2"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:backgroundTint="@color/grey_dark" />
+
+                <Button
+                    android:id="@+id/tv_sony_volume_up"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:backgroundTint="@color/grey_dark"
+                    android:text="@string/plus"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/tv_sony_volume_down"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:backgroundTint="@color/grey_dark"
+                    android:text="@string/minus"
+                    android:textColor="@color/white" />
+            </GridLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <GridLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:columnCount="1"
+                android:rowCount="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text="@string/channel"
+                    android:textColor="@color/white" />
+
+                <View
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_row="1"
+                    android:layout_rowSpan="2"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:backgroundTint="@color/grey_dark" />
+
+                <Button
+                    android:id="@+id/tv_sony_channel_up"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:backgroundTint="@color/grey_dark"
+                    android:text="@string/plus"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/tv_sony_channel_down"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_gravity="fill"
+                    android:backgroundTint="@color/grey_dark"
+                    android:text="@string/minus"
+                    android:textColor="@color/white" />
+            </GridLayout>
+
+            <Button
+                android:id="@+id/tv_sony_cc_subtitle"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/cc_subtitle"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

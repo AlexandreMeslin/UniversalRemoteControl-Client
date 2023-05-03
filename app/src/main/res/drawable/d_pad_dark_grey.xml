@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <group>
+        <!-- Outer circle -->
+        <path
+            android:fillColor="@color/grey_dark"
+            android:pathData="M100,0
+                              a100,100 0 1,0 0,200
+                              a100,100 0 1,0 0,-200"
+            android:strokeWidth="0"
+            android:strokeColor="@android:color/transparent" />
+
+        <!-- Yellow lines -->
+        <path
+            android:fillColor="#FF000000"
+            android:pathData="M29.289,29.289
+                              l141.42,141.42"
+            android:strokeWidth="2"
+            android:strokeColor="#FF000000" />
+
+        <path
+            android:fillColor="#FF000000"
+            android:pathData="M29.289,170.71
+                              l141.42,-141.42"
+            android:strokeWidth="2"
+            android:strokeColor="#FF000000" />
+
+        <!-- Inner circle -->
+        <path
+            android:fillColor="@color/grey_dark"
+            android:pathData="M100,50a50,50 0 1,0 0,100a50,50 0 1,0 0,-100"
+            android:strokeWidth="2"
+            android:strokeColor="#FF000000" />
+
+        <!-- Left arrow -->
+        <group
+            android:translateX="10"
+            android:translateY="88">
+            <path
+                android:fillColor="@android:color/white"
+                android:pathData="M15.41,16.59
+                                  L10.83,12
+                                  l4.58,-4.59
+                                  L14,6
+                                  l-6,6 6,6 1.41,-1.41z" />
+        </group>
+
+        <!-- Right arrow -->
+        <group
+            android:translateX="161.42"
+            android:translateY="88">
+        <path
+            android:fillColor="@android:color/white"
+            android:pathData="M8.59,16.59
+                              L13.17,12 8.59,7.41 10,6
+                              l6,6 -6,6 -1.41,-1.41z" />
+        </group>
+
+        <!-- Up arrow -->
+        <group
+            android:translateX="88"
+            android:translateY="15">
+            <path
+                android:fillColor="@android:color/white"
+                android:pathData="M7.41,15.41
+                                  L12,10.83
+                                  l4.59,4.58
+                                  L18,14
+                                  l-6,-6 -6,6z"/>
+        </group>
+
+        <!-- Down arrow -->
+        <group
+            android:translateX="88"
+            android:translateY="161">
+            <path
+                android:fillColor="@android:color/white"
+                android:pathData="M7.41,8.59
+                                  L12,13.17
+                                  l4.59,-4.58
+                                  L18,10
+                                  l-6,6 -6,-6 1.41,-1.41z"/>
+        </group>
+    </group>
+</vector>

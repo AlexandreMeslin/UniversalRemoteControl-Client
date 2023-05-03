@@ -1,0 +1,1442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragment.ReceiverOnkioFragment"
+    tools:ignore="TooManyViews">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:columnCount="9"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:rowCount="39">
+
+            <!-- Row 0 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:text="@string/receiver"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_gravity="center"
+                android:text="@string/zone_2"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="7"
+                android:layout_gravity="center"
+                android:text="@string/source"
+                android:textColor="@color/white" />
+
+            <!-- Row 1 -->
+            <ImageButton
+                android:id="@+id/rcv_onkyo_receiver_power"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/orange"
+                android:contentDescription="@string/receiver_power"
+                android:src="@drawable/outline_power_settings_new_24_black" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_zone_2"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/grey_light"
+                android:contentDescription="@string/action_for_zone_2" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_source_power"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="7"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/orange"
+                android:contentDescription="@string/source_power"
+                android:src="@drawable/outline_power_settings_new_24_black" />
+
+            <!-- Borders -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_columnSpan="9"
+                android:layout_gravity="center"
+                android:background="@color/black"
+                android:elevation="1dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/remote_mode_input_selector"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_columnSpan="9"
+                android:layout_gravity="center"
+                android:background="@color/grey" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_row="6"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="fill_horizontal"
+                android:background="@color/black" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_row="10"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="fill_horizontal"
+                android:background="@color/grey" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_rowSpan="12"
+                android:layout_column="0"
+                android:layout_gravity="fill"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_rowSpan="7"
+                android:layout_column="8"
+                android:layout_gravity="fill"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <!-- Mode -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="center"
+                android:background="@color/black"
+                android:elevation="1dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/mode"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="fill_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:layout_row="4"
+                android:layout_rowSpan="7"
+                android:layout_column="2"
+                android:layout_gravity="fill_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:background="@color/grey" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_row="8"
+                android:layout_column="2"
+                android:layout_columnSpan="6"
+                android:layout_gravity="fill_horizontal"
+                android:background="@color/grey" />
+
+            <!-- este estava errado -->
+            <View
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:layout_row="8"
+                android:layout_rowSpan="3"
+                android:layout_column="4"
+                android:layout_gravity="fill"
+                android:layout_marginTop="0dp"
+                android:background="@color/grey" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_row="10"
+                android:layout_column="4"
+                android:layout_columnSpan="5"
+                android:layout_gravity="fill_horizontal"
+                android:background="@color/grey" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_rowSpan="4"
+                android:layout_column="8"
+                android:layout_gravity="fill"
+                android:layout_marginTop="0dp"
+                android:background="@color/grey" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:layout_row="10"
+                android:layout_rowSpan="4"
+                android:layout_column="5"
+                android:layout_gravity="top|center|bottom"
+                android:layout_marginTop="0dp"
+                android:background="@color/grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_row="14"
+                android:layout_column="0"
+                android:layout_columnSpan="9"
+                android:layout_gravity="fill"
+                android:background="@color/grey" />
+            <!-- End of border description -->
+
+            <!-- Row 3 -->
+            <Button
+                android:id="@+id/rcv_onkyo_bd_dvd"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/bd_dvd"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_cbl_sat"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/cbl_sat"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_game"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_rowWeight="1"
+                android:layout_column="5"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/game"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_pc"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_rowWeight="1"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/pc"
+                android:textColor="@color/black" />
+
+            <!-- Row 5 -->
+            <Button
+                android:id="@+id/rcv_onkyo_aux"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/_auxiliar"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_tuner"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_rowWeight="1"
+                android:layout_column="5"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/tuner"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_tv_cd"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_rowWeight="1"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/tv_cd"
+                android:textColor="@color/black" />
+
+            <!-- Row 5: Mode -->
+            <Button
+                android:id="@+id/rcv_onkyo_custom"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/custom"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_receiver"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:contentDescription="@string/receiver_mode"
+                android:text="@string/receiver"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_tv"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="9"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:contentDescription="@string/tv_mode"
+                android:text="@string/tv"
+                android:textColor="@color/black" />
+
+            <!-- Row 7 -->
+            <Button
+                android:id="@+id/rcv_onkyo_phono"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/phono"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_net"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_rowWeight="1"
+                android:layout_column="5"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/net"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_usb"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_rowWeight="1"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/usb"
+                android:textColor="@color/black" />
+
+            <!-- Row 9 -->
+            <Button
+                android:id="@+id/rcv_onkyo_muting_grey"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="9"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/muting_for_tv"
+                android:text="@string/muting"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_display"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="9"
+                android:layout_rowWeight="1"
+                android:layout_column="5"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/display"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_muting_white"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="9"
+                android:layout_rowWeight="1"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light"
+                android:text="@string/muting"
+                android:textColor="@color/black" />
+
+            <!-- Row 11 -->
+            <ImageButton
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="11"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/orange"
+                android:contentDescription="@string/tv_power"
+                android:src="@drawable/outline_power_settings_new_24_black" />
+
+            <View
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="11"
+                android:layout_rowSpan="3"
+                android:layout_column="3"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/just_a_view_to_fill_tv_volume" />
+
+            <ImageButton
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="11"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/tv_volume_up"
+                android:src="@drawable/baseline_arrow_drop_up_24" />
+
+            <View
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="11"
+                android:layout_rowSpan="3"
+                android:layout_column="5"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/just_a_view_to_fill_ch_disk_and_album" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_plus_ch_dsk"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="11"
+                android:layout_rowWeight="1"
+                android:layout_column="5"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/ch_dsk"
+                android:textColor="@color/white" />
+
+            <View
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_row="11"
+                android:layout_rowSpan="3"
+                android:layout_column="7"
+                android:layout_gravity="fill"
+                android:backgroundTint="@color/grey_light" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_receiver_volume_up"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="11"
+                android:layout_rowWeight="1"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_light"
+                android:contentDescription="@string/receiver_volume_up"
+                android:src="@drawable/baseline_arrow_drop_up_24_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="12"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="@string/vol"
+                android:textColor="@color/black" />
+
+            <!-- Row 12 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="12"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="@string/tv"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="12"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="@string/vol"
+                android:textColor="@color/white" />
+
+            <!-- Row 13 -->
+            <Button
+                android:id="@+id/rcv_onkyo_receiver_tv_input"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="13"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/input"
+                android:text="@string/input"
+                android:textColor="@color/white" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_tv_volume_down"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="13"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/tv_volume_down"
+                android:rotation="180"
+                android:src="@drawable/baseline_arrow_drop_up_24" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_album"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="13"
+                android:layout_rowWeight="1"
+                android:layout_column="5"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/album"
+                android:textColor="@color/white" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_receiver_volume_down"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="13"
+                android:layout_rowWeight="1"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_light"
+                android:contentDescription="@string/receiver_volume_down"
+                android:rotation="180"
+                android:src="@drawable/baseline_arrow_drop_up_24_black" />
+
+            <!-- D-Pad start -->
+            <!-- This relative layout creates a D-Pad -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="15"
+                android:layout_rowSpan="3"
+                android:layout_column="3"
+                android:layout_columnSpan="3"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/rcv_onkyo_d_pad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/d_pad"
+                    android:src="@drawable/d_pad_dark_grey" />
+
+                <Button
+                    android:id="@+id/rcv_onkyo__ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:text="@string/enter"
+                    android:textColor="@color/white" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <Button
+                        android:id="@+id/rcv_onkyo_left"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/rcv_onkyo_d_pad"
+                    android:layout_centerVertical="true">
+
+                    <Button
+                        android:id="@+id/rcv_onkyo_right"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <Button
+                        android:id="@+id/rcv_onkyo_up"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/rcv_onkyo_d_pad"
+                    android:layout_centerHorizontal="true">
+
+                    <Button
+                        android:id="@+id/rcv_onkyo_down"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <!--
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="15"
+                android:layout_rowSpan="3"
+                android:layout_column="3"
+                android:layout_columnSpan="3"
+                android:layout_columnWeight="1"
+                android:background="@color/black"
+                android:contentDescription="@string/d_pad"
+                android:paddingTop="10dp"
+                android:scaleType="fitXY"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:src="@drawable/d_pad_dark_grey" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_d_pad_enter"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_row="17"
+                android:layout_column="5"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="-36dp"
+                android:layout_marginTop="-36dp"
+                android:layout_marginRight="66dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/enter"
+                android:outlineProvider="none"
+                android:text="@string/enter"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rvc_onkyio_d_pad_up"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_row="15"
+                android:layout_column="3"
+                android:layout_columnSpan="3"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/d_pad_up"
+                android:outlineProvider="none"
+                android:text=""
+                android:textColor="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/rvc_onkyio_d_pad_down"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_row="18"
+                android:layout_column="3"
+                android:layout_columnSpan="3"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="-50dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/d_pad_down"
+                android:outlineProvider="none"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rvc_onkyio_d_pad_left"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_row="17"
+                android:layout_column="3"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="-36dp"
+                android:layout_marginRight="40dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/d_pad_left"
+                android:outlineProvider="none"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rvc_onkyio_d_pad_right"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_row="17"
+                android:layout_column="5"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="-36dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/d_pad_right"
+                android:outlineProvider="none"
+                android:text=""
+                android:textColor="@color/black" />
+            -->
+            <!-- D-Pad end -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="16"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginTop="75dp"
+                android:text="@string/playlist"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="16"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginTop="75dp"
+                android:text="@string/playlist"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="15"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="@string/top_menu"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_top_menu"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="16"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="-20dp"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/top_menu_sp_guide"
+                android:text="@string/sp_guide"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_q_setup"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="17"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/q_setup"
+                android:text="@string/q"
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="15"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="@string/menu"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_menu"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="16"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="-20dp"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/prev_ch_or_menu"
+                android:text="@string/prev_ch"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_return"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="17"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/txt_return"
+                android:text="@string/txt_return"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="19"
+                android:layout_column="3"
+                android:layout_columnSpan="3"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="@string/audio"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_home"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="20"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="52dp"
+                android:layout_marginRight="-52dp"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/home"
+                android:text="@string/home"
+                android:textColor="@color/white"
+                tools:ignore="RtlHardcoded" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_previous"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="22"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/previous"
+                android:src="@drawable/baseline_skip_previous_white_24" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_rewind"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="22"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/rewind"
+                android:src="@drawable/baseline_fast_rewind_white_24" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_forward"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="22"
+                android:layout_rowWeight="1"
+                android:layout_column="5"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/next"
+                android:src="@drawable/baseline_fast_forward_white_24" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_next"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="22"
+                android:layout_rowWeight="1"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/next"
+                android:src="@drawable/baseline_skip_next_white_24" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="23"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/black"
+                android:contentDescription="@string/reverse_play"
+                android:rotation="180"
+                android:src="@drawable/baseline_play_arrow_white_24" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_pause"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="24"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/stop"
+                android:src="@drawable/baseline_pause_24_white" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_play"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="24"
+                android:layout_rowWeight="1"
+                android:layout_column="3"
+                android:layout_columnSpan="3"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/play"
+                android:src="@drawable/baseline_play_arrow_white_24" />
+
+            <ImageButton
+                android:id="@+id/rcv_onkyo_stop"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="24"
+                android:layout_rowWeight="1"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_dark"
+                android:contentDescription="@string/stop"
+                android:src="@drawable/baseline_stop_white_24" />
+
+            <TextView
+                android:layout_row="25"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="@string/search"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_row="25"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="@string/repeat"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_row="25"
+                android:layout_column="5"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="@string/random"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_row="25"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:text="@string/mode"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_mode_tv"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="26"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_light"
+                android:contentDescription="@string/mode_tv"
+                android:text="@string/mode_tv"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_music"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="26"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_light"
+                android:contentDescription="@string/music"
+                android:text="@string/music"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_game2"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="26"
+                android:layout_column="5"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_light"
+                android:contentDescription="@string/game"
+                android:text="@string/game"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_Stereo"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="26"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:backgroundTint="@color/grey_light"
+                android:contentDescription="@string/stereo"
+                android:text="@string/stereo"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="27"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/red"
+                android:contentDescription="@string/a"
+                android:gravity="center"
+                android:text="@string/a"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="27"
+                android:layout_column="3"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/green"
+                android:contentDescription="@string/b"
+                android:gravity="center"
+                android:text="@string/b"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="27"
+                android:layout_column="5"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/yellow"
+                android:contentDescription="@string/c"
+                android:gravity="center"
+                android:text="@string/c"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="27"
+                android:layout_column="7"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/blue"
+                android:contentDescription="@string/d"
+                android:gravity="center"
+                android:text="@string/d"
+                android:textColor="@color/black" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:rowCount="8">
+
+            <Button
+                android:id="@+id/rcv_onkyo_1"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:backgroundTint="@color/grey_dark"
+                android:elevation="8dp"
+                android:text="@string/_1"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_2"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:backgroundTint="@color/grey_dark"
+                android:elevation="16dp"
+                android:text="@string/_2"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_3"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:backgroundTint="@color/grey_dark"
+                android:elevation="32dp"
+                android:text="@string/_3"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_4"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_4"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_5"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_5"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_6"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_6"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_7"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_7"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_8"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_8"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_9"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_9"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="0.5"
+                android:layout_column="0"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_rowWeight="0.5"
+                android:layout_column="0"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_rowWeight="0.5"
+                android:layout_column="0"
+                android:layout_gravity="end"
+                android:text="@string/fill_10"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_rowWeight="0.5"
+                android:layout_column="1"
+                android:layout_gravity="end"
+                android:text="@string/_11"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_rowWeight="0.5"
+                android:layout_column="2"
+                android:layout_gravity="end"
+                android:text="@string/_12"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_plus_10"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="6"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/plus_10"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_0"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="6"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/_0"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rcv_onkyo_clr"
+                style="@style/MyCustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="6"
+                android:layout_rowWeight="1"
+                android:layout_column="2"
+                android:backgroundTint="@color/grey_dark"
+                android:text="@string/clr"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_column="0"
+                android:text="@string/d_tun_dimmer"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_column="2"
+                android:text="@string/sleep"
+                android:textColor="@color/white" />
+
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

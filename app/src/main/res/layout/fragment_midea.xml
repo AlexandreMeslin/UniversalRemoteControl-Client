@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context=".fragment.MideaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/power_colon"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/ac_on"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pink_dark"
+                    android:text="@string/on"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/ac_off"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pink_dark"
+                    android:text="@string/off"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/mode_colon"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/ac_mode_auto"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/auto"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/ac_mode_cool"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/cool"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/ac_mode_dry"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/dry"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/ac_mode_fan"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/fan"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/temp"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/ac_17"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="8dp"
+                    android:text="@string/_17_u00b0c"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/ac_18"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="16dp"
+                    android:text="@string/_18_u00b0c"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/ac_19"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="32dp"
+                    android:text="@string/_19_u00b0c"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/ac_20"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="32dp"
+                    android:text="@string/_20_u00b0c"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/ac_21"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="32dp"
+                    android:text="@string/_21_u00b0c"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/ac_22"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="8dp"
+                    android:text="@string/_22_u00b0c"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/ac_23"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="16dp"
+                    android:text="@string/_23_u00b0c"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/ac_24"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="32dp"
+                    android:text="@string/_24_u00b0c"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/ac_25"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="32dp"
+                    android:text="@string/_25_u00b0c"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/ac_26"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="32dp"
+                    android:text="@string/_26_u00b0c"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/fan_speed_colon"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/ac_fan_auto"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/auto"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/ac_fan_low"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/low"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/ac_fan_medium"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/medium"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/ac_fan_high"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/high"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/green_dark"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/ac_air_direction"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/air_direction"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/ac_swing"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/swing"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/ac_economic_running"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/economic_running"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_dark"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/ac_ok"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/ok"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/ac_clock"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/clock"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/ac_cancel"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/cancel"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/ac_timer_on"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/timer_on"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/ac_timer_off"
+                style="@style/MyCustomButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/timer_off"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_dark"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/green_dark"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/time_adjust"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/ac_time_adjust_down"
+                        style="@style/MyCustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/time_adjust_down"
+                        android:rotation="90"
+                        android:src="@drawable/baseline_play_arrow_24" />
+
+                    <ImageButton
+                        android:id="@+id/ac_time_adjust_up"
+                        style="@style/MyCustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/time_adjust_up"
+                        android:rotation="270"
+                        android:src="@drawable/baseline_play_arrow_24" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

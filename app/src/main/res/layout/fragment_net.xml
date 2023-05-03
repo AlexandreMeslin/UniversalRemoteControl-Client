@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragment.NetFragment"
+    tools:ignore="TooManyViews">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/net_portal"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/portal"
+                    android:textColor="@color/black" />
+                <!-- By setting the layout_weight of the View to 1, it will fill all the remaining space between the two buttons. -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/net_on_off"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/on_off"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/net_mosaico"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/mosaico"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/net_info"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/info"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rowCount="3"
+                    android:columnCount="1">
+
+                    <View
+                        style="@style/MyCustomButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_row="0"
+                        android:layout_rowSpan="3"
+                        android:layout_column="0"
+                        android:layout_gravity="fill"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/just_a_view_to_fill_ch_disk_and_album" />
+
+                    <Button
+                        android:id="@+id/net_volume_up"
+                        style="@style/MyCustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/volume_up"
+                        android:text="@string/plus"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:text="@string/volume"
+                        android:elevation="1dp"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/net_volume_down"
+                        style="@style/MyCustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_column="0"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/volume_down"
+                        android:text="@string/minus"
+                        android:textColor="@color/black" />
+                </GridLayout>
+
+                <Button
+                    android:id="@+id/net_mute"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/mute"
+                    android:text="@string/mute"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/net_voltar"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/voltar"
+                    android:textColor="@color/black" />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:rowCount="3"
+                    android:columnCount="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/net_channel_up"
+                        style="@style/MyCustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:backgroundTint="@color/white"
+                        android:text="@string/plus"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_gravity="center"
+                        android:elevation="1dp"
+                        android:text="@string/channel"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/net_channel_down"
+                        style="@style/MyCustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="2"
+                        android:layout_column="0"
+                        android:backgroundTint="@color/white"
+                        android:text="@string/minus"
+                        android:textColor="@color/black" />
+
+                    <View
+                        style="@style/MyCustomButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_row="0"
+                        android:layout_rowSpan="3"
+                        android:layout_column="0"
+                        android:layout_gravity="fill"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/just_a_view_to_fill_ch_disk_and_album" />
+                </GridLayout>
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/net_sair"
+                        style="@style/MyCustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/white"
+                        android:text="@string/sair"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent" />
+
+                    <!-- https://developer.android.com/studio/write/vector-asset-studio#running -->
+                    <!-- This relative layout creates a D-Pad -->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/net_d_pad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/d_pad"
+                            android:src="@drawable/d_pad_white" />
+
+                        <Button
+                            android:id="@+id/net_ok"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:text="@string/ok"
+                            android:textColor="@color/black" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true">
+
+                            <Button
+                                android:id="@+id/net_left"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/net_d_pad"
+                            android:layout_centerVertical="true">
+
+                            <Button
+                                android:id="@+id/net_right"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true">
+
+                            <Button
+                                android:id="@+id/net_up"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/net_d_pad"
+                            android:layout_centerHorizontal="true">
+
+                            <Button
+                                android:id="@+id/net_down"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/net_net_tv"
+                        style="@style/MyCustomButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/white"
+                        android:text="@string/net_tv"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <Button
+                    android:id="@+id/net_itv"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/itv"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/net_audio"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/green"
+                    android:text="@string/audio"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/net_agora"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/agora"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/net_legenda"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/yellow"
+                    android:text="@string/legenda"
+                    android:textColor="@color/black" />
+
+                <ImageButton
+                    android:id="@+id/net_message"
+                    style="@style/MyCustomButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/blue"
+                    android:contentDescription="@string/message"
+                    android:src="@drawable/baseline_message_24"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/net_1"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="8dp"
+                    android:text="@string/_1"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_2"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="16dp"
+                    android:text="@string/_2"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_3"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:elevation="32dp"
+                    android:text="@string/_3"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/net_4"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_4"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_5"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_5"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_6"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_6"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/net_7"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_7"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_8"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_8"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_9"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_9"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/net_fav"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/fav"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_0"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/_0"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_menu"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/menu"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#809980"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/net_rew"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#606060"
+                    android:contentDescription="@string/rewind"
+                    android:src="@drawable/baseline_fast_rewind_24"
+                    android:text="@string/rew" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/net_play"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#606060"
+                    android:contentDescription="@string/play"
+                    android:src="@drawable/baseline_play_arrow_24"
+                    android:text="@string/play" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/net_fwd"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#606060"
+                    android:contentDescription="@string/forward"
+                    android:src="@drawable/baseline_fast_forward_24"
+                    android:text="@string/fwd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#809980"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/net_replay"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#606060"
+                    android:contentDescription="@string/replay"
+                    android:src="@drawable/baseline_replay_24"
+                    android:text="@string/replay" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/net_stop"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#606060"
+                    android:contentDescription="@string/stop"
+                    android:src="@drawable/baseline_stop_24"
+                    android:text="@string/stop" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <ImageButton
+                    android:id="@+id/net_rec"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#606060"
+                    android:contentDescription="@string/record"
+                    android:src="@drawable/baseline_fiber_manual_record_24"
+                    android:text="@string/record" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/net_ppv"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/ppv"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_now"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/now"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/net_musica"
+                    style="@style/MyCustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/musica"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+</ScrollView>
